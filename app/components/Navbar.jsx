@@ -66,12 +66,12 @@ const NavBar = () => {
       ref={navRef}
       className={`${
         isScrollingDown ? "-translate-y-full transform" : "translate-y-0"
-      } fixed left-0 right-0 top-0 backdrop-blur-md z-50 bg-blackish/70 border-b-gray`}
+      } fixed left-0 right-0 top-0 backdrop-blur-md z-50 bg-blackish/80 border-b-gray`}
     >
       <div className="container_pad mx-auto flex max-w-screen-2xl flex-wrap items-center justify-between py-4">
         <Link
           href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
+          className="flex items-center hover:opacity-70 active:opacity-100 space-x-3 rtl:space-x-reverse"
         >
           <Image
             src="/logo.svg"
@@ -122,8 +122,8 @@ const NavBar = () => {
           className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
           id="navbar-default"
         >
-          <div className="flex gap-6 w-full flex-col md:items-center md:flex-row md:justify-between">
-            <ul className="mt-4 flex flex-col rounded-lg border text-lg border-gray p-4 font-semibold uppercase md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
+          <div className="flex py-4 md:py-0 gap-6 w-full flex-col md:items-center md:flex-row md:justify-between">
+            <ul className="mt-4 md:animate-none animate-slide-down flex flex-col rounded-lg border text-lg border-gray p-4 font-semibold uppercase md:space-y-0 space-y-1 md:mt-0 md:flex-row md:space-x-8 md:border-0 md:p-0 rtl:space-x-reverse">
               <li>
                 <Link
                   href="/"

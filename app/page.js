@@ -65,7 +65,7 @@ export default function Home() {
         <div className="mx-auto mt-24 flex max-w-screen-md flex-col items-center justify-center gap-16 md:flex-row md:gap-10 lg:mt-32">
           {/* book-1 */}
           <AnimatedDiv variant="fadeInUp" delay={0.4}>
-            <div className="max-w-[224px] w-full md:max-w-sm">
+            <div className="max-w-[224px] w-full relative md:max-w-sm">
               <Image
                 src="/echo.webp"
                 alt="book image of Echoes of Existence"
@@ -86,6 +86,10 @@ export default function Home() {
               <Link href="/books/echoes-of-existence">
                 <Button />
               </Link>
+              {/* new badge */}
+              <div className="bg-[url('/badge.webp')] px-2 shadow-2xl md:px-4 py-[2px] text-gray bg-cover font-bold absolute right-0 top-0 z-20 text-xs leading-none">
+                Latest
+              </div>
             </div>
           </AnimatedDiv>
           {/* book-2 */}
@@ -221,25 +225,39 @@ export default function Home() {
           </div>
 
           {/* txt */}
-          <div className="overflow-hidden md:col-span-8">
-            <AnimatedDiv variant="fadeInRight" delay={0.7}>
-              <h4 className="mb-6 mt-8 text-2xl lg:text-3xl font-medium lg:mt-12">
-                Natalia Davies - reflective mystery writer
-              </h4>
-              <p className="mb-5 text-base lg:text-lg lg:leading-8 font-light leading-7">
-                Natalia Davies is a celebrated author known for her captivating
-                storytelling and evocative narratives that blend mystery,
-                introspection, and human emotion. With a keen eye for detail and
-                a profound understanding of the human psyche, Natalia weaves
-                compelling tales that resonate with readers on a deep level.
-                <br />
-                <br />
-                Her novels delve into themes of loss, love, identity, and
-                redemption, inviting readers to explore the complexities of life
-                through the lens of unforgettable characters and gripping plots.
-                Discover Natalia Davies' world of literary intrigue and embark
-                on a journey of discovery through her captivating novels.
-              </p>
+          <div className="md:col-span-8 ">
+            {/* <AnimatedDiv variant="fadeInRight" delay={0.7}> */}
+            <div className="overflow-x-hidden">
+              <AnimatedDiv variant="fadeInRight" delay={0.7}>
+                <h4 className="mb-6 mt-8 text-2xl lg:text-3xl font-medium lg:mt-12">
+                  Natalia Davies - reflective mystery writer
+                </h4>
+                <p className="mb-5 text-base lg:text-lg lg:leading-8 font-light leading-7">
+                  Natalia Davies is a celebrated author known for her
+                  captivating storytelling and evocative narratives that blend
+                  mystery, introspection, and human emotion. With a keen eye for
+                  detail and a profound understanding of the human psyche,
+                  Natalia weaves compelling tales that resonate with readers on
+                  a deep level.
+                  <br />
+                  <br />
+                  Her novels delve into themes of loss, love, identity, and
+                  redemption, inviting readers to explore the complexities of
+                  life through the lens of unforgettable characters and gripping
+                  plots. Discover Natalia Davies' world of literary intrigue and
+                  embark on a journey of discovery through her captivating
+                  novels.
+                </p>
+                {/* <Link href="/about">
+                  <Button />
+                </Link> */}
+              </AnimatedDiv>
+            </div>
+            {/* <Link href="/about">
+                <Button />
+              </Link> */}
+            {/* </AnimatedDiv> */}
+            <AnimatedDiv variant="fadeInUp" delay={0.2}>
               <Link href="/about">
                 <Button />
               </Link>

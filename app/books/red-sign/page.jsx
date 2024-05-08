@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Button from "@/app/components/Button";
 import AnimatedDiv from "@/app/components/AnimatedDiv";
 import RedReview from "@/app/components/RedReview";
@@ -120,6 +121,75 @@ const RedSignPage = () => {
         </AnimatedDiv>
       </section>
       {/* BUY Section end */}
+
+      {/* OTHER BOOKS SECTION */}
+      <section className="container_pad mt-28 md:mt-36 text-center lg:mt-36 xl:mt-44">
+        <AnimatedDiv variant="fadeInUp">
+          {" "}
+          <h2 className="text-3xl font-bold underline decoration-primary underline-offset-[40px] md:text-4xl xl:text-5xl">
+            OTHER BOOKS
+          </h2>
+          {/* books */}
+          <div className="mx-auto mt-24 flex max-w-screen-md flex-col items-center justify-center gap-16 md:flex-row md:gap-10 lg:mt-28">
+            {/* book-1 */}
+            <AnimatedDiv variant="fadeInUp" delay={0.4}>
+              <div className="max-w-[224px] relative w-full md:max-w-xs">
+                <Image
+                  src="/echo.webp"
+                  alt="book image of Echoes of Existence"
+                  width={0}
+                  height={0}
+                  sizes="100vw (max-width: 896px) 33vw"
+                  className="mx-auto h-auto mb-6 w-full"
+                />
+                {/* <h4 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
+                Global Sourcing
+              </h4>
+              <p className="mb-5 text-base font-light lg:h-56 lg:text-lg">
+                "An insightful guide that demystifies the outsourcing landscape.
+                This book not only highlights the benefits but also addresses
+                the potential challenges and how to mitigate them. A valuable
+                resource for entrepreneurs and managers alike."
+              </p> */}
+                <Link href="/books/echoes-of-existence">
+                  <Button />
+                </Link>
+                {/* new badge */}
+                <div className="bg-[url('/badge.webp')] px-2 shadow-2xl md:px-4 py-[2px] text-gray bg-cover font-bold absolute right-0 top-0 z-20 text-xs leading-none">
+                  Latest
+                </div>
+              </div>
+            </AnimatedDiv>
+            {/* book-2 */}
+            <AnimatedDiv variant="fadeInUp" delay={0.4}>
+              <div className="max-w-[224px] w-full md:max-w-xs">
+                <Image
+                  src="/shelby.webp"
+                  alt="book image of Shelby"
+                  width={0}
+                  height={0}
+                  sizes="100vw (max-width: 896px) 45vw"
+                  className="mb-6 mx-auto h-auto w-full"
+                />
+                {/* <h4 className="mb-3 mt-8 text-2xl font-medium lg:mt-12">
+                Future Financiers
+              </h4>
+              <p className="mb-5 text-base font-light lg:h-56 lg:text-lg">
+                "This book is a treasure trove of insights for finance
+                professionals. It presents innovative approaches to wealth
+                management with clarity and depth, making complex topics
+                accessible to all readers. Highly recommended for anyone looking
+                to future-proof their financial strategies."
+              </p> */}
+                <Link href="/books/shelby">
+                  <Button />
+                </Link>
+              </div>
+            </AnimatedDiv>
+          </div>
+        </AnimatedDiv>
+      </section>
+      {/* OTHERS Section end */}
     </div>
   );
 };

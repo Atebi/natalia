@@ -9,9 +9,6 @@ module.exports = {
     extend: {
       backgroundImage: {
         bg: "url('/bg.webp')",
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
 
       colors: {
@@ -23,12 +20,18 @@ module.exports = {
 
       animation: {
         slideInRight: "slide-in-right 0.3s ease",
+        "slide-down": "slide-down 1.5s ease",
       },
       keyframes: {
         "slide-in-right": {
           "0%": { transform: "translateX(100%)" },
           // "50%": { transform: "translateX(50%)" },
           "100%": { transform: "translateX(0%)" },
+        },
+        "slide-down": {
+          "0%": { opacity: 0, transform: "translate(0%,-100%)" },
+          // "50%": {opacity: 0.5, transform: "translate(0%,-50%)" },
+          "100%": { opacity: 1, transform: "translate(0%,0%)" },
         },
       },
     },

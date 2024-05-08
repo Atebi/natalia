@@ -74,7 +74,7 @@ const ContactPage = () => {
         </div>
 
         {/* form */}
-        <div className="mt-16 max-w-2xl overflow-hidden md:col-span-8 md:mt-8">
+        <div className="mt-16 max-w-2xl md:col-span-8 md:mt-8">
           {/* <AnimatedDiv variant="fadeInRight" delay={0.4}>
             <div className="mb-10 w-fit border-b-4 border-primary pb-6">
               <h1 className=" text-4xl font-extrabold leading-none tracking-tight  md:text-5xl xl:text-6xl">

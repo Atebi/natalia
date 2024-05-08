@@ -19,7 +19,7 @@ const BooksPage = () => {
       <div className="mx-auto mt-16 flex max-w-screen-md flex-col items-center justify-center gap-16 md:flex-row md:gap-10 lg:mt-20">
         {/* book-1 */}
         <AnimatedDiv variant="fadeInUp" delay={0.4}>
-          <div className="max-w-[224px] w-full md:max-w-sm">
+          <div className="max-w-[224px] relative w-full md:max-w-sm">
             <Image
               src="/echo.webp"
               alt="book image of Echoes of Existence"
@@ -40,6 +40,10 @@ const BooksPage = () => {
             <Link href="/books/echoes-of-existence">
               <Button />
             </Link>
+            {/* new badge */}
+            <div className="bg-[url('/badge.webp')] px-2 shadow-2xl md:px-4 py-[2px] text-gray bg-cover font-bold absolute right-0 top-0 z-20 text-xs leading-none">
+              Latest
+            </div>
           </div>
         </AnimatedDiv>
         {/* book-2 */}
